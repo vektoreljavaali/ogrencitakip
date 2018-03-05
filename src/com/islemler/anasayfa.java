@@ -17,7 +17,7 @@ public class anasayfa {
 	System.out.println("	[3]- Öðrenci Ders Atama");
 	System.out.println("	[4]- Öðrenci Not Giriþi");
 	System.out.println("	[5]- Öðrenci Notlarýný Listele");
-	System.out.println("	[6]- Borlu Öðrenci Listele");
+	System.out.println("	[6]- Borçlu Öðrenci Listele");
 
 	Scanner sc = new Scanner(System.in);
 	System.out.println("Bir Ýþlem Seçiniz.....: ");

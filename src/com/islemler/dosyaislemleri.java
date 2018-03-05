@@ -22,8 +22,31 @@ public class dosyaislemleri {
 		bf.write(icerik);
 		bf.newLine();
 		bf.close();
+		sayacarttir();
 	}
 	
+	public void sayacarttir() throws URISyntaxException, IOException {
+		int sayac = sayacoku()+1;
+		File ds = new File(yeriver()+"/com/dbdosyalari/sayac.txt");
+		BufferedWriter bf = new BufferedWriter(new FileWriter(ds, false));
+	    bf.write(sayac);
+		bf.newLine();
+		bf.close();		
+	}
+	
+	
+	public int sayacoku() throws FileNotFoundException, URISyntaxException {
+		File ds = new File(yeriver()+"/com/dbdosyalari/sayac.txt");
+		int result=0;
+		String sayac="0";
+		Scanner	sc = new Scanner(ds);
+		while(sc.hasNextLine()) {
+			sayac = sc.nextLine();			
+		}
+		result = Integer.parseInt(sayac);
+		
+		return result;
+	}
 	
 	
 	
